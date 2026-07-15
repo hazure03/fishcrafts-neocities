@@ -1,0 +1,197 @@
+:root {
+    --bg-trans:#181919b3;
+    --color1:#000000;
+    --color2:#373d3c;
+    --color3:#b64421;
+    --color4:#de8d2a;
+    --color5:#f9ef8f;
+    --color6:#f7f2d5;
+}
+
+@font-face {
+    font-family: AccentFont;
+    src: url(fonts/bettynoir.ttf);
+}
+
+html {
+    background-color:black;
+    background-image: url(images/francobarbi-shrine/docks-bg.png);
+    background-size: 150%;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin:0px;
+    padding:0px;
+    color: var(--color6);
+    font-family: 'Courier New', Courier, monospace;
+    font-size:14px;
+}
+
+a {
+    color:var(--color5);
+}
+
+a:hover {
+    color:var(--color4);
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+    grid-template-columns: 1fr 4fr;
+    padding:5px;
+    min-width: 900px;
+    max-width: 900px;
+    margin: auto;
+    margin-top:0px;
+}
+
+.container div.header {
+    grid-area: header;
+    background-image: url(images/francobarbi-shrine/francobanner-3.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:180px;
+    border:none;
+    background-color:transparent;
+    
+}
+
+.container div.menu {
+    grid-area: menu;
+    padding:0px;
+    background-color: var(--bg-trans);
+    border:1px solid var(--color6);
+    border-right: none;
+    border-bottom: none;
+    /** margin-right:3px; **/
+}
+
+.container div.content {
+    grid-area: content;
+    background-color: var(--bg-trans);
+    padding: 10px;
+    border:1px solid var(--color6);
+    border-bottom:0px;
+    min-height: 400px;
+    max-width:705px;
+    min-width:705px;
+}
+
+.container div.footer {
+    grid-area: footer;
+    background-color: var(--bg-trans);
+    text-align: center;
+    line-height: 5px;;
+    border:1px solid var(--color6);
+    font-size:11px;
+    /** margin-top:3px; **/
+}
+
+td {
+    border:1px solid;
+    width:100px;
+    height:50px;
+}
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+h2, h1 {
+    color: var(--color4);
+    text-shadow: var(--color6) 1px 1px 0cm;
+    margin: 0px;
+    padding:3px;
+}
+
+h1 {
+    font-size:40px;
+    padding:20px 0px;
+    text-align: center;
+    background-color:var(--color2);
+    text-transform:uppercase;
+    font-family: 'AccentFont', 'Courier New';
+    background: linear-gradient(180deg,rgba(55, 61, 60, 1) 50%, rgb(40, 44, 46) 100%);
+}
+
+h2 {
+    font-size:40px;
+    padding:20px 10px;
+    text-transform:uppercase;
+    background: linear-gradient(90deg,rgba(55, 61, 60, 1) 0%, rgba(18, 26, 25, 0) 100%);
+    font-family: 'AccentFont', 'Courier New';
+}
+
+.menu .dropdown {
+    border: none;
+    margin:0px;
+    padding:0px;
+    color:var(--color4);
+}
+
+.menu ul{
+    margin:auto;
+    padding:0px;
+    color: var(--color5);
+    list-style: none;
+    width:100%;
+    overflow: hidden;
+}
+
+.menu .dropdown, .menu .dropdown .dropbtn , .menu .dropdown .dropdown-content, .menu .dropdown .dropdown-content a {
+    border:none;
+    margin:0px;
+    padding:0px;
+}
+
+.menu .dropdown .dropbtn {
+    background-color:#2f3332;
+}
+
+.menu li, .menu .dropdown, .menu .dropdown .dropdown-content, .menu .dropdown .dropdown-content a {
+    text-align: center;
+    margin:0px;
+    padding:0px;
+    line-height: 20px;
+    border-top:1px dashed var(--color1);
+}
+
+.menu a, .dropdown .dropbtn, .menu .dropdown .dropdown-content a {
+    text-decoration: none;
+    text-transform:uppercase;
+    display: block;
+    color: var(--color5);
+    text-align: center;
+    background: var(--color2);
+    /** background: linear-gradient(0deg,rgba(55, 61, 60, 1) 30%, rgb(73, 77, 77) 100%); **/
+}
+
+.dropbtn::before, .dropbtn::after, .dropbtn:hover::before, .dropbtn:hover::after {
+    content:' ⬇ ';
+    color:var(--color4);
+}
+
+.menu a:active, .dropdown .dropbtn:active, .menu .dropdown .dropdown-content a:active {
+    color: var(--color2);
+    background:var(--color4);
+}
+
+.menu .dropdown .dropdown-content a {display:none;}
+
+.menu .dropdown:hover .dropdown-content a {
+    display: block;
+    background-color:#89897c;
+    color: var(--color1);
+}
+
+.menu a:hover, .dropdown .dropbtn:hover, .menu .dropdown .dropdown-content a:hover {
+    color: var(--color1);
+    background:var(--color5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}

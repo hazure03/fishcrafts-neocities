@@ -109,6 +109,11 @@ const headerEl = `
       <h1>INTERESTS</h1>
       <ul class="side-menu">
         <li>
+          <a href="francobarbi-home.html" target="_blank">
+            Franco Barbi
+          </a>
+        </li>
+        <li>
           <a href="music.html">
             Music
           </a>
